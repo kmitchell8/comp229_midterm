@@ -1,3 +1,10 @@
+/*
+ * File Name: server.js
+ * Student’s Name: Kevon Mitchell
+ * Student ID: 301508202
+ * Date: October 14, 2025
+ */
+
 //import express from 'express'; //using tpye: "module"
 const express = require('express');//using type="commonjs"
 //const cors = require('cors');
@@ -62,7 +69,7 @@ app.put(`${api_string}/:id`, (req, res) => {
 
 app.delete(`${api_string}/:id`, (req, res) => {
     const index = req.params.id;
-    const deletedSport = sports.splice(index, 1);
+    const deletedSport = sports.splice(index, 1);//method to remove 1 item froma arry based on index
     res.json({});
 })
 const PORT = 8080;

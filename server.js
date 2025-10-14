@@ -9,10 +9,11 @@
 const express = require('express');//using type="commonjs"
 //const cors = require('cors');
 
+
 const app = express();
 //enable cors
 //app.use (cors());
-
+app.use(express.json());
 let sports = [
     'Soccer',
     'Handball',
@@ -70,7 +71,7 @@ app.put(`${api_string}/:id`, (req, res) => {
 app.delete(`${api_string}/:id`, (req, res) => {
     const index = req.params.id;
     const deletedSport = sports.splice(index, 1);//method to remove 1 item froma arry based on index
-    res.json({});
+    //res.json({id: index, SportName:sports[index]});
 })
 const PORT = 8080;
 /*
